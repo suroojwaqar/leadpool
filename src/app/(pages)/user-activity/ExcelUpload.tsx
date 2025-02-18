@@ -96,7 +96,7 @@ export function ExcelUpload({ onUpload }: ExcelUploadProps) {
     };
 
     fetchMetadata();
-  }, []);
+  }, [toast]);
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];

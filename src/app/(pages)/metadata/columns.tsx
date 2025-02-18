@@ -21,6 +21,75 @@ export type Metadata = {
   createdDate: string;
 };
 
+const ActionCell = ({ row, onDataChange }: { row: any, onDataChange: () => void }) => {
+  const { toast } = useToast();
+  const metadata = row.original;
+  const [isEditing, setIsEditing] = useState(false);
+  
+  const handleDelete = async () => {
+    try {
+      const response = await fetch(`https://useractivity.i-o.digital/metadata/${metadata._id}`, {
+        method: 'DELETE',
+      });
+      
+      if (response.ok) {
+        toast({
+          title: "Success",
+          description: "Metadata deleted successfully",
+        });
+        onDataChange(); // Refresh data instead of page reload
+      } else {
+        throw new Error('Failed to delete metadata');
+      }
+    } catch (error) {
+      console.error('Error deleting metadata:', error);
+      toast({
+        title: "Error",
+        description: "Failed to delete metadata",
+        variant: "destructive",
+      });
+    }
+  };
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" className="h-8 w-8 p-0">
+          <span className="sr-only">Open menu</span>
+          <MoreHorizontal className="h-4 w-4" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuLabel>Actions</DropdownMenuLabel>
+        <DropdownMenuItem onClick={() => navigator.clipboard.writeText(metadata._id)}>
+          Copy ID
+        </DropdownMenuItem>
+        <DropdownMenuItem onSelect={(e) => {
+          e.preventDefault();
+          setIsEditing(true);
+        }}>
+          Edit
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={handleDelete}>
+          Delete
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+      {isEditing && (
+        <MetadataDrawer 
+          mode="edit" 
+          editData={metadata} 
+          onSuccess={() => {
+            onDataChange();
+            setIsEditing(false);
+          }}
+          open={isEditing}
+          onOpenChange={setIsEditing}
+        />
+      )}
+    </DropdownMenu>
+  );
+};
+
 export const createColumns = (onDataChange: () => void): ColumnDef<Metadata>[] => [
   {
     id: "select",
@@ -74,73 +143,6 @@ export const createColumns = (onDataChange: () => void): ColumnDef<Metadata>[] =
   },
   {
     id: "actions",
-    cell: ({ row }) => {
-      const { toast } = useToast();
-      const metadata = row.original;
-      const [isEditing, setIsEditing] = useState(false);
-      
-      const handleDelete = async () => {
-        try {
-          const response = await fetch(`https://useractivity.i-o.digital/metadata/${metadata._id}`, {
-            method: 'DELETE',
-          });
-          
-          if (response.ok) {
-            toast({
-              title: "Success",
-              description: "Metadata deleted successfully",
-            });
-            onDataChange(); // Refresh data instead of page reload
-          } else {
-            throw new Error('Failed to delete metadata');
-          }
-        } catch (error) {
-          console.error('Error deleting metadata:', error);
-          toast({
-            title: "Error",
-            description: "Failed to delete metadata",
-            variant: "destructive",
-          });
-        }
-      };
-
-      return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <MoreHorizontal className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem onClick={() => navigator.clipboard.writeText(metadata._id)}>
-              Copy ID
-            </DropdownMenuItem>
-            <DropdownMenuItem onSelect={(e) => {
-              e.preventDefault();
-              setIsEditing(true);
-            }}>
-              Edit
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={handleDelete}>
-              Delete
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-          {isEditing && (
-            <MetadataDrawer 
-              mode="edit" 
-              editData={metadata} 
-              onSuccess={() => {
-                onDataChange();
-                setIsEditing(false);
-              }}
-              open={isEditing}
-              onOpenChange={setIsEditing}
-            />
-          )}
-        </DropdownMenu>
-      );
-    },
+    cell: ({ row }) => <ActionCell row={row} onDataChange={onDataChange} />
   },
 ];
