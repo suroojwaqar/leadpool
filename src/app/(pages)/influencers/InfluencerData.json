@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "city": "New York",
+    "category": "Fashion",
+    "img": "https://hub.dummyapis.com/Image?text=AJ&height=120&width=120"
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "city": "Los Angeles",
+    "category": "Fitness",
+    "img": "https://hub.dummyapis.com/Image?text=BS&height=120&width=120"
+  },
+  {
+    "id": 3,
+    "name": "Charlie Davis",
+    "city": "Chicago",
+    "category": "Travel",
+    "img": "https://hub.dummyapis.com/Image?text=CD&height=120&width=120"
+  },
+  {
+    "id": 4,
+    "name": "Diana White",
+    "city": "Houston",
+    "category": "Food",
+    "img": "https://hub.dummyapis.com/Image?text=DW&height=120&width=120"
+  },
+  {
+    "id": 5,
+    "name": "Edward Brown",
+    "city": "Phoenix",
+    "category": "Tech",
+    "img": "https://hub.dummyapis.com/Image?text=EB&height=120&width=120"
+  },
+  {
+    "id": 6,
+    "name": "Fiona Green",
+    "city": "Philadelphia",
+    "category": "Health",
+    "img": "https://hub.dummyapis.com/Image?text=FG&height=120&width=120"
+  },
+  {
+    "id": 7,
+    "name": "George Taylor",
+    "city": "San Antonio",
+    "category": "Sports",
+    "img": "https://hub.dummyapis.com/Image?text=GT&height=120&width=120"
+  },
+  {
+    "id": 8,
+    "name": "Hannah Lee",
+    "city": "San Diego",
+    "category": "Lifestyle",
+    "img": "https://hub.dummyapis.com/Image?text=HL&height=120&width=120"
+  },
+  {
+    "id": 9,
+    "name": "Isaac Moore",
+    "city": "Dallas",
+    "category": "Music",
+    "img": "https://hub.dummyapis.com/Image?text=IM&height=120&width=120"
+  },
+  {
+    "id": 10,
+    "name": "Julia Walker",
+    "city": "San Jose",
+    "category": "Beauty",
+    "img": "https://hub.dummyapis.com/Image?text=JW&height=120&width=120"
+  },
+  {
+    "id": 11,
+    "name": "Kevin Hall",
+    "city": "Austin",
+    "category": "Education",
+    "img": "https://hub.dummyapis.com/Image?text=KH&height=120&width=120"
+  },
+  {
+    "id": 12,
+    "name": "Laura Martinez",
+    "city": "Jacksonville",
+    "category": "Fashion",
+    "img": "https://hub.dummyapis.com/Image?text=LM&height=120&width=120"
+  },
+  {
+    "id": 13,
+    "name": "Michael Anderson",
+    "city": "Fort Worth",
+    "category": "Fitness",
+    "img": "https://hub.dummyapis.com/Image?text=MA&height=120&width=120"
+  },
+  {
+    "id": 14,
+    "name": "Natalie Clark",
+    "city": "Columbus",
+    "category": "Travel",
+    "img": "https://hub.dummyapis.com/Image?text=NC&height=120&width=120"
+  },
+  {
+    "id": 15,
+    "name": "Oliver Young",
+    "city": "Charlotte",
+    "category": "Food",
+    "img": "https://hub.dummyapis.com/Image?text=OY&height=120&width=120"
+  },
+  {
+    "id": 16,
+    "name": "Penelope Scott",
+    "city": "San Francisco",
+    "category": "Tech",
+    "img": "https://hub.dummyapis.com/Image?text=PS&height=120&width=120"
+  },
+  {
+    "id": 17,
+    "name": "Quentin Wright",
+    "city": "Indianapolis",
+    "category": "Health",
+    "img": "https://hub.dummyapis.com/Image?text=QW&height=120&width=120"
+  },
+  {
+    "id": 18,
+    "name": "Rachel Lewis",
+    "city": "Seattle",
+    "category": "Sports",
+    "img": "https://hub.dummyapis.com/Image?text=RL&height=120&width=120"
+  },
+  {
+    "id": 19,
+    "name": "Samuel Baker",
+    "city": "Denver",
+    "category": "Lifestyle",
+    "img": "https://hub.dummyapis.com/Image?text=SB&height=120&width=120"
+  },
+  {
+    "id": 20,
+    "name": "Tina Evans",
+    "city": "Washington",
+    "category": "Music",
+    "img": "https://hub.dummyapis.com/Image?text=TE&height=120&width=120"
+  },
+  {
+    "id": 21,
+    "name": "Uma Parker",
+    "city": "Boston",
+    "category": "Beauty",
+    "img": "https://hub.dummyapis.com/Image?text=UP&height=120&width=120"
+  },
+  {
+    "id": 22,
+    "name": "Victor Adams",
+    "city": "El Paso",
+    "category": "Education",
+    "img": "https://hub.dummyapis.com/Image?text=VA&height=120&width=120"
+  },
+  {
+    "id": 23,
+    "name": "Wendy Torres",
+    "city": "Nashville",
+    "category": "Fashion",
+    "img": "https://hub.dummyapis.com/Image?text=WT&height=120&width=120"
+  },
+  {
+    "id": 24,
+    "name": "Xavier Perez",
+    "city": "Detroit",
+    "category": "Fitness",
+    "img": "https://hub.dummyapis.com/Image?text=XP&height=120&width=120"
+  },
+  {
+    "id": 25,
+    "name": "Yvonne Stewart",
+    "city": "Memphis",
+    "category": "Travel",
+    "img": "https://hub.dummyapis.com/Image?text=YS&height=120&width=120"
+  },
+  {
+    "id": 26,
+    "name": "Zachary Sanders",
+    "city": "Portland",
+    "category": "Food",
+    "img": "https://hub.dummyapis.com/Image?text=ZS&height=120&width=120"
+  },
+  {
+    "id": 27,
+    "name": "Ava Carter",
+    "city": "Las Vegas",
+    "category": "Tech",
+    "img": "https://hub.dummyapis.com/Image?text=AC&height=120&width=120"
+  },
+  {
+    "id": 28,
+    "name": "Benjamin Rodriguez",
+    "city": "Louisville",
+    "category": "Health",
+    "img": "https://hub.dummyapis.com/Image?text=BR&height=120&width=120"
+  },
+  {
+    "id": 29,
+    "name": "Chloe Miller",
+    "city": "Baltimore",
+    "category": "Sports",
+    "img": "https://hub.dummyapis.com/Image?text=CM&height=120&width=120"
+  },
+  {
+    "id": 30,
+    "name": "Daniel Martinez",
+    "city": "Milwaukee",
+    "category": "Lifestyle",
+    "img": "https://hub.dummyapis.com/Image?text=DM&height=120&width=120"
+  },
+  {
+    "id": 31,
+    "name": "Ella Lopez",
+    "city": "Albuquerque",
+    "category": "Music",
+    "img": "https://hub.dummyapis.com/Image?text=EL&height=120&width=120"
+  },
+  {
+    "id": 32,
+    "name": "Franklin King",
+    "city": "Tucson",
+    "category": "Beauty",
+    "img": "https://hub.dummyapis.com/Image?text=FK&height=120&width=120"
+  },
+  {
+    "id": 33,
+    "name": "Grace Hill",
+    "city": "Fresno",
+    "category": "Education",
+    "img": "https://hub.dummyapis.com/Image?text=GH&height=120&width=120"
+  },
+  {
+    "id": 34,
+    "name": "Henry Rivera",
+    "city": "Sacramento",
+    "category": "Fashion",
+    "img": "https://hub.dummyapis.com/Image?text=HR&height=120&width=120"
+  },
+  {
+    "id": 35,
+    "name": "Isla Carter",
+    "city": "Mesa",
+    "category": "Fitness",
+    "img": "https://hub.dummyapis.com/Image?text=IC&height=120&width=120"
+  },
+  {
+    "id": 36,
+    "name": "Jack Morgan",
+    "city": "Atlanta",
+    "category": "Travel",
+    "img": "https://hub.dummyapis.com/Image?text=JM&height=120&width=120"
+  },
+  {
+    "id": 37,
+    "name": "Katherine Brooks",
+    "city": "Kansas City",
+    "category": "Food",
+    "img": "https://hub.dummyapis.com/Image?text=KB&height=120&width=120"
+  },
+  {
+    "id": 38,
+    "name": "Liam Bell",
+    "city": "Colorado Springs",
+    "category": "Tech",
+    "img": "https://hub.dummyapis.com/Image?text=LB&height=120&width=120"
+  },
+  {
+    "id": 39,
+    "name": "Mia Watson",
+    "city": "Omaha",
+    "category": "Health",
+    "img": "https://hub.dummyapis.com/Image?text=MW&height=120&width=120"
+  },
+  {
+    "id": 40,
+    "name": "Noah Mitchell",
+    "city": "Raleigh",
+    "category": "Sports",
+    "img": "https://hub.dummyapis.com/Image?text=NM&height=120&width=120"
+  }
+]
