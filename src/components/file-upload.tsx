@@ -5,6 +5,7 @@ import { useDropzone } from "react-dropzone";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { X } from "lucide-react";
+import Image from "next/image";
 
 interface FileUploadProps {
   onChange: (file?: File) => void;
@@ -38,10 +39,12 @@ export function FileUpload({ onChange, value }: FileUploadProps) {
       {preview ? (
         <div className="flex flex-col gap-4">
           <div className="relative h-48 w-full border rounded-md overflow-hidden bg-gray-50">
-            <img
+            <Image
               src={preview}
               alt="Preview"
-              className="w-full h-full object-contain p-2"
+              fill
+              className="object-contain p-2"
+              sizes="(max-width: 768px) 100vw, 800px"
             />
           </div>
           <Button

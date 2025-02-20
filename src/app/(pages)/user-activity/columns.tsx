@@ -21,6 +21,19 @@ const formatDate = (dateString: string) => {
   }
 };
 
+// Add this new component before the columns definition
+const CellAction = ({ id }: { id: string }) => {
+  const router = useRouter();
+  return (
+    <Button
+      variant="ghost"
+      onClick={() => router.push(`/user-activity/${id}`)}
+    >
+      View Details
+    </Button>
+  );
+};
+
 export const columns: ColumnDef<UserActivity>[] = [
   {
     accessorKey: "_id",
@@ -72,16 +85,6 @@ export const columns: ColumnDef<UserActivity>[] = [
   },
   {
     id: "actions",
-    cell: ({ row }) => {
-      const router = useRouter();
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => router.push(`/user-activity/${row.original._id}`)}
-        >
-          View Details
-        </Button>
-      );
-    }
+    cell: ({ row }) => <CellAction id={row.original._id} />
   }
 ];
