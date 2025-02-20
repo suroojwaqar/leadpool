@@ -1,11 +1,11 @@
 export interface Activity {
+  _id: string;
   category: string;
   type: string;
   source: string;
   client: string;
   createDate: string;
-  otherInformation: Record<string, string>;
-  _id?: string;
+  otherInformation?: Record<string, any>;
 }
 
 export interface UserActivityResponse {
@@ -17,8 +17,10 @@ export interface UserActivityResponse {
 }
 
 export interface UserActivity {
+  _id: string;
   phoneNumber: string;
-  activityCount: number;
+  createDate: string;
+  activities: Activity[];
 }
 
 export interface ExcelUploadData {

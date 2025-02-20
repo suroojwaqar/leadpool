@@ -23,14 +23,20 @@ import { ExcelUpload } from "./ExcelUpload";
 export default function UserActivityPage() {
   const [activities, setActivities] = useState<UserActivity[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
+        setError(null);
+        console.log('Starting data fetch...');
         const data = await getUserActivities();
-        setActivities(data);
+        console.log('Data received:', data);
+        setActivities(Array.isArray(data) ? data : []);
       } catch (error) {
         console.error("Error fetching activities:", error);
+        setError(error instanceof Error ? error.message : 'Failed to fetch data');
       } finally {
         setLoading(false);
       }
@@ -101,6 +107,14 @@ export default function UserActivityPage() {
     }
   };
 
+  if (error) {
+    return (
+      <ContentLayout title="User Activities">
+        <div className="text-red-500">Error: {error}</div>
+      </ContentLayout>
+    );
+  }
+
   return (
     <ContentLayout title="User Activities">
       <div className="flex justify-between items-center mb-4">
@@ -125,7 +139,16 @@ export default function UserActivityPage() {
       </div>
 
       {loading ? (
-        <div>Loading...</div>
+        <div className="flex items-center justify-center p-8">
+          <div className="text-center">
+            <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>
+            <p>Loading activities...</p>
+          </div>
+        </div>
+      ) : activities.length === 0 ? (
+        <div className="text-center p-8">
+          <p>No activities found</p>
+        </div>
       ) : (
         <DataTable columns={columns} data={activities} />
       )}
